@@ -1,9 +1,8 @@
 ngApp.controller('myValidatorController', function($scope) {
-	$scope.urlValidator = serverURL;
+	$scope.urlValidator = serverDirectURL;
 	$scope.urlCaptcha = serverCaptchaURL;
 	$scope.betaBanner = betaBanner;
 	$scope.labelStaging = labelStaging;
-	$scope.serverToken = serverToken;
 
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
@@ -270,7 +269,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			$(document.body).css({
 				'cursor': 'wait'
 			});
-			var requestJSON = {
+			$.ajax({
 				type: "POST",
 				url: $scope.urlValidator + "TestRuns",
 				data: JSON.stringify(testRunRequest),
@@ -295,9 +294,7 @@ ngApp.controller('myValidatorController', function($scope) {
 					}, 2500).fadeOut(12000);
 					progress(12, 12, $('#progressBar3'));
 				}
-			}
-			if ($scope.serverToken != "") requestJSON.headers = { 'x-api-key': $scope.serverToken }
-			$.ajax(requestJSON);
+			});
 		}
 	}
 
@@ -342,14 +339,12 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2") testSuiteDesc = "Conformance Class View Service WMS";
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
 			// DOWNLOAD SERVICE
-			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";
-			if (testSuiteId == "EID1104fc9f-a7af-3862-9bd1-9f02921103a2") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
-			if (testSuiteId == "EID85df0f3f-f55a-3944-a88f-f1cb4763336d") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
+			if (testSuiteId == "EIDe51620af-bcf5-4719-ab0e-ef6226a572fa") testSuiteDesc = "Conformance Class Direct WFS";
+			if (testSuiteId == "EID18d66578-6ad6-3d3d-a090-0cf885c61de1") testSuiteDesc = "WFS 2.0 (OGC 09-025r2/ISO 19142) Conformance Test Suite";
 			if (testSuiteId == "EID174edf55-699b-446c-968c-1892a4d8d5bd") testSuiteDesc = "Conformance Class Pre-defined WFS";
 			if (testSuiteId == "EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93") testSuiteDesc = "Conformance Class Pre-defined Atom";
 			if (testSuiteId == "EID074570ad-d720-47b3-af79-d54201793404") testSuiteDesc = "Conformance Class Download Service WCS Core";
 			if (testSuiteId == "EID0ff73873-5601-41ff-8d92-3fb1fbba3cf2") testSuiteDesc = "Conformance Class Download Service Pre-defined SOS";
-			if (testSuiteId == "EID599648e9-316c-31ba-bae4-1a8668ce05fb") testSuiteDesc = "Conformance Class OGC API - Features";
 			// DISCOVERY SERVICE
 			if (testSuiteId == "EIDc837298f-a10e-42d1-88f2-f1415cbbb463") testSuiteDesc = "Conformance Class Discovery Service CSW";
 			// DATASET

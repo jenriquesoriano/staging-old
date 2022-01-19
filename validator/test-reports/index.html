@@ -176,7 +176,7 @@
                             class="ecl-menu__sublink"></span></li>
                         <li class="ecl-menu__subitem" data-ecl-menu-subitem="true"><span
                             class="ecl-menu__sub">Validator API</span></li>
-                            <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://staging-inspire-validator.eu-west-1.elasticbeanstalk.com/validator/swagger-ui.html"
+                            <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://inspire.ec.europa.eu/validator/swagger-ui.html"
                                 class="ecl-menu__sublink">Access the API</a></li>
                             <li class="ecl-menu__subitem" data-ecl-menu-subitem="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/training%20material/2019-10-01%2B02%20JRC%20Workshop/Step-by-step%20example%20-%20API"
                                 class="ecl-menu__sublink">Example of API usage</a></li>
@@ -357,10 +357,10 @@
                                 </td>
                                 <td>&nbsp;&nbsp;</td>
                                 <td ng-show="checkIfIsArray(testItem.testTasks.TestTask) == false">
-                                  <a ng-click="openTestObject(testItem.id)" style="cursor: pointer;text-decoration: underline;">{{urlRealValidator}}TestRuns/{{testItem.id}}.xml</a>
+                                  <a ng-click="openTestObject(testItem.id)" style="cursor: pointer;text-decoration: underline;">{{urlValidator}}TestRuns/{{testItem.id}}.xml</a>
                                 </td>
                                 <td ng-show="checkIfIsArray(testItem.testTasks.TestTask) == true">
-                                      <a ng-click="openTestObject(testItem.id)" style="cursor: pointer;text-decoration: underline;">{{urlRealValidator}}TestRuns/{{testItem.id}}.xml</a>
+                                      <a ng-click="openTestObject(testItem.id)" style="cursor: pointer;text-decoration: underline;">{{urlValidator}}TestRuns/{{testItem.id}}.xml</a>
                                 </td>
                               </tr>
                               <tr>
@@ -374,8 +374,8 @@
 				  <table style="width: 100%">
 				     <tr>
 					 <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail"></a></td>
-					<td><a target="_buttonLink" class="buttons_links" href="{{urlRealValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
-					<td><a target="_buttonLink" class="buttons_links" href="{{urlRealValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
+					<td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
+					<td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
 					<td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail"></a></td>
 					<td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail"></a></td>
 				     </tr>
@@ -389,8 +389,8 @@
 				  <table style="width: 100%">
 				     <tr>
 					<td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail"></a></td>
-					<td><a target="_buttonLink" class="buttons_links" href="{{urlRealValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
-					<td><a target="_buttonLink" class="buttons_links" href="{{urlRealValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
+					<td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
+					<td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
 					<td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail"></a></td>
 					<td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail"></a></td>
 				     </tr>
@@ -448,7 +448,7 @@
     <footer class="ecl-footer-standardised">
   <div class="ecl-container ecl-footer-standardised__container">
     <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
-        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
+        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a> (v0.44b 2021-07-29 16:07)
       <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
     </section>
     <div class="ecl-footer-standardised__section2">
